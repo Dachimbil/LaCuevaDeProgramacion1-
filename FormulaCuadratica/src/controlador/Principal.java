@@ -7,9 +7,9 @@ public class Principal {
 		boolean continuar = true;
 		while(continuar == true) 
 		{
-		Controlador c = new Controlador();
+			Controlador c = new Controlador();
 		}
 
-}
-	
+	}
+
 }
