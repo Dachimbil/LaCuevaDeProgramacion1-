@@ -1,5 +1,11 @@
 package mundo;
 
-public class Mundo {
+public class Mundo 
+{
+	
+	public Mundo()
+	{
+		
+	}
 
 }
