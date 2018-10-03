@@ -356,4 +356,20 @@ public class Mundo
 
 	}
 
+	public ArrayList<String> getCadena() {
+		return cadena;
+	}
+
+	public void setCadena(ArrayList<String> cadena) {
+		this.cadena = cadena;
+	}
+
+	public File getF() {
+		return f;
+	}
+
+	public void setF(File f) {
+		this.f = f;
+	}
+
 }

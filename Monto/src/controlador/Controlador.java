@@ -1,20 +1,19 @@
 package controlador;
 
-import Vista.Interfaz;
+import Vista.InterfazGUI;
 import modelo.Mundo;
 
 public class Controlador 
 {
 	private Mundo m;
-	private Interfaz v;
+	private InterfazGUI v;
 
 	public Controlador()
 	{
-		v = new Interfaz();
+		v = new InterfazGUI();
 		m = new Mundo();
-		m.imprimirNumero();
-		m.LeerData();
-
+		
+		v.setVisible(true);
 	}
 
 }
