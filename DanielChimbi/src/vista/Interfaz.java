@@ -1,18 +1,69 @@
 package vista;
 
-import javax.swing.JOptionPane;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 
-public class Interfaz 
+import javax.swing.JFrame;
+
+import controlador.Controlador;
+
+public class Interfaz extends JFrame
 {
-	public Interfaz()
+
+	private  static  final  long serialVersionUID =  1L ;
+	private PanelConsolidado pc;
+	private PanelListadoVentas plv;
+
+	public Interfaz(Controlador control)
 	{
+		setSize(600,235); 
+		setResizable ( false ); 
+		setTitle ( "TIENDA GENÉRICA " ); 
+		setDefaultCloseOperation ( EXIT_ON_CLOSE ); 
+		setLocationRelativeTo ( null ); 
+
+		setLayout ( new BorderLayout());
+
+		pc =  new  PanelConsolidado ();
+		add (pc,BorderLayout.NORTH);
+
+		plv =  new  PanelListadoVentas ();
+		add (plv,BorderLayout.SOUTH);
+		
+		pc.getBotonConsolidado(). addActionListener (control);
+		plv.getBotonListadoVentas().addActionListener (control);
 
 	}
 
-	public void escribirResultados(String dato) 
+	public PanelConsolidado getPc() 
 	{
-		JOptionPane.showMessageDialog(null, dato, "Tienda Genérica", JOptionPane.INFORMATION_MESSAGE);
+		return pc;
 	}
+
+	public void setPc(PanelConsolidado pc) 
+	{
+		this.pc = pc;
+	}
+
+	public PanelListadoVentas getPlv() 
+	{
+		return plv;
+	}
+
+	public void setPlv(PanelListadoVentas plv) 
+	{
+
+		this.plv = plv;
+	}
+
+	public static long getSerialversionuid() 
+	{
+		return serialVersionUID;
+	}
+
+	
+
+
 }
 
 
